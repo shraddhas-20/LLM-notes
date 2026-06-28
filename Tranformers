@@ -1,0 +1,24 @@
+ 2. Transformers
+
+	—> INTRODUCED IN 2017 > used for language translation by GOOGLE
+	—> now : A Deep neural network architecture
+	—> input text -> preprocessing (tokenisation) -> Encoding (Vector AND Positional Embedding)-> partial output -> Decoding -> Output
+	—> GPT doesn’t have encoder, only decoder
+
+	—> SELF ATTENTION MECHANISM : a dynamic mechanism that calculates context-dependent relationships between words within the same sequence (e.g The ‘cat’ was ill so ‘it’ couldn’t cross the street.)
+
+BERT VS GPT  (both use transformers)
+-> Bidirectional Encoder Representations from transformers
+-> BERT looks a the sentence from both the left and the right side
+-> it is really good for sentiment analysis.
+-> BERT can differentiate between the river bank and the financial bank.
+-> can predict hidden words in between sentences
+
+WHEREAS
+
+-> GPT only reads the sentences from left to right.
+-> not really food at sentiment analysis
+->can only predict the word at the end of the sentence
+
+—> Not all transformers are LLMs and vice versa
+—> Transformers are also used in CNNs (Vision Transformers) 
