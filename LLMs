@@ -1,0 +1,42 @@
+LLM 
+
+1. Intro:
+
+a. Deep NNs trained on LARGE amount of data.
+b. ChatGPT, Gemini, Claude etc, all use LLMs (have their own LLMs —> NNs trained on HUGE data)
+** 
+c. WHY “LLM”? —> They deal with billions of parameters, even trillions. e.g -> GPT3 has 150+ Billion parameters. (In 1900s,  there used to be only 100-150 parameters)
+**
+
+d. Their token size is too big
+e. LLMs only deal with Language. (NLP)
+f. Small NLP models were designed for specific tasks. LLMs cover a wide range
+g. WHAT MAKES LLM TOO GOOD?   —> Transformer architecture
+h. AI —> ML —> DL —> LLM (Order)
+I. GenAI --> LLM + DL
+
+Applications of LLM:
+-> chatbots/ virtual assistants
+-> machine translation 
+-> sentiment analysis etc
+-> Context creation
+
+TOKENS
+      |
+WORD —> SPLIT —> ENCODE
+
+CORPUS —> PARAGRAPH
+VOCABULARY —> UNIQUE WORDS IN THE DICTIONARY
+
+
+TOKENIZATION — > GENERATING TOKENS FROM THE CORPUS
+
+Types of Tokenisation —> 1.sentence tokeniser, 
+					     2.word tokeniser,
+					     3. workpunct tokenizer( word+punctuation) 
+					     4. TreeBankTokenizer
+
+Tokenisation tool —> nltk
+
+Commands —> from nltk.tokenizer import   sent_tokenize /word_tokenize/ wordpunct_tokenize/ TreebankWordTokenizer
+
