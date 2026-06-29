@@ -22,3 +22,12 @@ WHEREAS
 
 —> Not all transformers are LLMs and vice versa
 —> Transformers are also used in CNNs (Vision Transformers) 
+
+
+GPT —> DECODER ONLY MODEL
+-> uses BYTE PAIR ENCODER
+-> VOCAB SIZE : 40478
+-> contains 12 decoder layers (transformer blocks)
+-> context size: 512 (can se 512 inputs at one time)
+-> attention heads (12) —> 12 parallel channels to process information from 12 different perspectives at the same time.   : every layer has 1
+->512 tokens x 64 dimensional embedding x 12 heads
