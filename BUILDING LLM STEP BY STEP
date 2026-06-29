@@ -1,0 +1,74 @@
+
+3. STAGES OF BUILDING AN LLM
+
+STAGE 1 —
+
+- [ ] DATA PREPROCESSING
+- [ ]  ATTENTION MECHANISM
+- [ ]  LLM ARCHITECTURE
+
+STAGE 2 —
+
+- [ ] TRAINING LOOP
+- [ ] MODEL EVALUATION
+- [ ] LOAD PRE-TRAINED WEIGHTS (FROM OPEN AI)
+
+STAGE 3 —
+
+- [ ] FINETUNING
+- [ ] CLASSIFIER BUILDING
+- [ ] PERSONAL ASSISTANT BUILDING
+
+—— BUILDING LLM TOKENIZER FROM SCRATCH -——
+
+TOKENS
+      |
+WORD —> SPLIT —> ENCODE
+
+CORPUS —> PARAGRAPH
+VOCABULARY —> UNIQUE WORDS IN THE DICTIONARY
+
+
+TOKENIZATION — > GENERATING TOKENS FROM THE CORPUS
+
+Types of Tokenisation —> 1.sentence tokeniser, 
+					     2.word tokeniser,
+					     3. workpunct tokenizer( word+punctuation) 
+					     4. TreeBankTokenizer
+
+Tokenisation tool —> nltk / PyTorch
+
+Commands —> from nltk.tokenizer import   sent_tokenize /word_tokenize/ wordpunct_tokenize/ TreebankWordTokenizer (done in google colab)
+
+Word based tokenisers drawback — OOV (Out Of Vocabulary) problem
+Solved via. - Character based tokenisation —> but the word and the sentence looses meaning and context
+
+Solution — Sub Word based tokenisation
+
+ 					—————
+
+Imp : Byte- Pair Tokenizer —
+	
+	—> sub word based tokenisation
+	—> Two rules : 1. Do NOT split frequent words into smaller subwords (they are important)
+				  2. Split rare words … down to the char level
+				  3. Introduced In 1994
+				  4. Data compression algorithm
+				  5. Most common pair of consecutive bytes of data is replaced with a byte that does NOT occur in data
+			          6.  Can comprehend and encode unknown words as well by breaking them down into smaller subwords
+
+
+	—> ILLUSTRATION :
+- [ ] Consider data : aaabdaaabac
+- [ ] The byte pair ‘aa’ occurs frequently
+- [ ] Replace ‘aa’ with an external char, such a Z
+- [ ] Compressed data. - ZabZabac
+- [ ] The byte pair ‘ab’ occurs frequently
+- [ ] Replace ‘ab’ with an external char, such a Y
+- [ ] New Compressed data - ZYZYac
+
+—> Example: suppose in a sentence data , ‘es’ occurs 13 times - a frequent byte pair - and after doing further char level encoding on this pair, we find out that ‘e’ occurs 16 times and hence ‘e’ alone occurs (16-13) times in the snetence and ’s’ occurs (13 -13) 0 times alone. 
+—> This analysis is possible only because we did byte pair encoding first
+—> add </w> at the end of the ending sequences
+
+** for code,  refer to colab
